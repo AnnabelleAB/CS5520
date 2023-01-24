@@ -11,7 +11,8 @@ const Button = ({ title, onPress }) => {
 
 const styles = {
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: '#8DCBE6',
+    margin: 8,
     padding: 10,
     borderRadius: 5,
     alignSelf: 'center',

@@ -3,7 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import StartingScreen from './screens/StartingScreen';
 import ConfirmScreen from './screens/ConfirmScreen';
 import { useState } from 'react';
-
+import colors from './colors';
+import { LinearGradient } from 'expo-linear-gradient';
 export default function App() {
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [email, setEmail] = useState('');
@@ -25,33 +26,46 @@ export default function App() {
     setIsSignedUp(false);
   }
   return (
-    <View style={styles.container}>
-      {!isSignedUp ? (
-        <StartingScreen
-          handleSignUp={handleSignUp}
-          email={email}
-          phone={phone}
-          setEmail={setEmail}
-          setPhone={setPhone}
-          handleReset={handleReset} />
-      ) : (
-        <ConfirmScreen
-          email={email}
-          phone={phone}
-          isSignedUp={isSignedUp}
-          setEmail={setEmail}
-          setPhone={setPhone}
+
+    // <View style={styles.container}>
+
+      <LinearGradient
+        // Button Linear Gradient
+      colors={['#B9F3FC', '#AEE2FF', '#93C6E7']}
+      style={styles.container}
+        >
+        {!isSignedUp ? (
+          <StartingScreen
+            handleSignUp={handleSignUp}
+            email={email}
+            phone={phone}
+            setEmail={setEmail}
+            setPhone={setPhone}
+            handleReset={handleReset} />
+        ) : (
+          <ConfirmScreen
+            email={email}
+            phone={phone}
+            isSignedUp={isSignedUp}
+            setEmail={setEmail}
+            setPhone={setPhone}
             setIsSignedUp={setIsSignedUp}
             handleReset={handleReset}
-        />
-      )}
-    </View>
+          />
+        )}
+
+      </LinearGradient>
+    // </View>
   )
 };
 const styles = StyleSheet.create({
+  background: {
+    width: '100%'
+  },
+  
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
     alignItems: 'center',
     justifyContent: 'center',
   },
