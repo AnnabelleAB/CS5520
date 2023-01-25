@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import Card from '../components/Card';
 import LabelText from '../components/LabelText';
 import Input from '../components/Input';
-
+import colors from '../colors';
 const StartingScreen = (props) => {
   const { handleSignUp, email, phone, setEmail, setPhone, handleReset } = props;
   const [errorEmail, setErrorEmail] = useState('');
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: colors.border,
     padding: 10,
     width: '100%',
     marginVertical: 10,

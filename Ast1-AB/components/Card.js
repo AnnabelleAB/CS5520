@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-
+import colors from '../colors';
 const Card = ({ children, style }) => {
   return (
     <View style={[styles.card, style]}>{children}</View>
@@ -9,10 +9,10 @@ const Card = ({ children, style }) => {
 
 const styles = {
   card: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     borderRadius: 10,
     padding: 20,
-    shadowColor: 'black',
+    shadowColor: colors.black,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.26,
     shadowRadius: 6,

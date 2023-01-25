@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   cardContainer: {
-    // padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
     width: '80%',
