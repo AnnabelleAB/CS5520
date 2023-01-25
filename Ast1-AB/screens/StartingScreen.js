@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View,StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import LabelText from '../components/LabelText';
@@ -21,32 +21,22 @@ const StartingScreen = (props) => {
 
   const handleEmailChange = (email) => {
     setEmail(email);
-    if (!validateEmail(email)) {
-      setErrorEmail('Invalid email address');
-    } else {
-      setErrorEmail('');
-    }
   }
 
   const handlePhoneChange = (phone) => {
     setPhone(phone);
-    if (!validatePhone(phone)) {
-      setErrorPhone('Invalid phone number');
-    } else {
-      setErrorPhone('');
-    }
   }
   const callHandleSignUp = () => {
     if (!validateEmail(email)) {
-        setErrorEmail('Invalid email address');
+      setErrorEmail('Invalid email address');
     }
     if (!validatePhone(phone)) {
-        setErrorPhone('Invalid phone number');
-    } else {
-        handleSignUp(email, phone);
+      setErrorPhone('Invalid phone number');
+    } else if (validateEmail(email) && validatePhone(phone)) {
+      handleSignUp(email, phone);
     }
   }
-  
+
 
 
   return (
@@ -71,7 +61,7 @@ const StartingScreen = (props) => {
           <Button title="Sign up" onPress={callHandleSignUp} />
         </View>
       </Card>
-      </View>
+    </View>
   );
 };
 
@@ -79,7 +69,7 @@ const StartingScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    width:'100%',
+    width: '100%',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -98,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '100%',
     marginVertical: 10,
-    borderRadius:5
+    borderRadius: 5
   },
   error: {
     color: 'red',

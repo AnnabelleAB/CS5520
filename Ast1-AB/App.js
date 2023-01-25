@@ -27,42 +27,39 @@ export default function App() {
   }
   return (
 
-    // <View style={styles.container}>
-
-      <LinearGradient
-        // Button Linear Gradient
+    <LinearGradient
+      // Button Linear Gradient
       colors={['#B9F3FC', '#AEE2FF', '#93C6E7']}
       style={styles.container}
-        >
-        {!isSignedUp ? (
-          <StartingScreen
-            handleSignUp={handleSignUp}
-            email={email}
-            phone={phone}
-            setEmail={setEmail}
-            setPhone={setPhone}
-            handleReset={handleReset} />
-        ) : (
-          <ConfirmScreen
-            email={email}
-            phone={phone}
-            isSignedUp={isSignedUp}
-            setEmail={setEmail}
-            setPhone={setPhone}
-            setIsSignedUp={setIsSignedUp}
-            handleReset={handleReset}
-          />
-        )}
+    >
+      {!isSignedUp ? (
+        <StartingScreen
+          handleSignUp={handleSignUp}
+          email={email}
+          phone={phone}
+          setEmail={setEmail}
+          setPhone={setPhone}
+          handleReset={handleReset} />
+      ) : (
+        <ConfirmScreen
+          email={email}
+          phone={phone}
+          isSignedUp={isSignedUp}
+          setEmail={setEmail}
+          setPhone={setPhone}
+          setIsSignedUp={setIsSignedUp}
+          handleReset={handleReset}
+        />
+      )}
 
-      </LinearGradient>
-    // </View>
+    </LinearGradient>
   )
 };
 const styles = StyleSheet.create({
   background: {
     width: '100%'
   },
-  
+
   container: {
     flex: 1,
     backgroundColor: colors.white,

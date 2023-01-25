@@ -19,7 +19,7 @@ const FinishScreen = ({ isConfirmed, phone, handleReset }) => {
           </>
         ) : (
           <>
-            <Text style={styles.text}> to see you go!</Text>
+            <Text style={styles.text}> Sorry to see you go!</Text>
             <Image source={require('../assets/sad-cat.gif')} style={styles.image} />
           </>
         )}
@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    width: '80%',
   },
   text: {
     fontSize: 20,
