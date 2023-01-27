@@ -12,6 +12,7 @@ export default function App() {
   const [errorEmail, setErrorEmail] = useState('');
   const [errorPhone, setErrorPhone] = useState('');
 
+
   const handleSignUp = (email, phone) => {
     setIsSignedUp(true);
     setEmail(email);
@@ -49,6 +50,7 @@ export default function App() {
           setPhone={setPhone}
           setIsSignedUp={setIsSignedUp}
           handleReset={handleReset}
+
         />
       )}
 
