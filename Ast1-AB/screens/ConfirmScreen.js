@@ -36,14 +36,14 @@ const ConfirmScreen = (props) => {
   return (
     <View style={styles.container}>
       <Card style={styles.cardContainer}>
-      <Text style={styles.text}>You have entered:</Text>
-      <Text style={styles.text}>Email: {email}</Text>
-      <Text style={styles.text}>Phone: {phone}</Text>
-      <Text style={styles.text}>Please confirm they are correct</Text>
-      <Button title="Go back" onPress={GoBack}/>
-      <Button title="Confirm" onPress={Confirm} />
+        <Text style={styles.text}>You have entered:</Text>
+        <Text style={styles.text}>Email: {email}</Text>
+        <Text style={styles.text}>Phone: {phone}</Text>
+        <Text style={styles.text}>Please confirm they are correct</Text>
+        <Button title="Go back" onPress={GoBack} />
+        <Button title="Confirm" onPress={Confirm} />
         <Button title="Finish Later" onPress={FinishLater} />
-        </Card>
+      </Card>
     </View>
   );
 };

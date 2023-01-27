@@ -8,7 +8,7 @@ const Input = ({ value, onChangeText, style }) => {
       value={value}
       onChangeText={onChangeText}
     />
-   
+
   );
 };
 
